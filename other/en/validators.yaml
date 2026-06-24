@@ -1,0 +1,15 @@
+validators:
+  - type: "MissingSheetsCheck"
+    
+  - type: "UnexpectedSheetsCheck"
+  
+  - type: "DuplicateSheetMatches"
+  
+  - type: "MandatoryColumns"
+  
+  - type: "UniqueColumn"
+  
+  - type: "PiiDataCheck" 
+  
+  - type: "ColumnNameCheck"
+  

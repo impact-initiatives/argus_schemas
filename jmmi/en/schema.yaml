@@ -1,0 +1,33 @@
+# config/schemas/jmmi_schema.yaml
+# JMMI Dataset Configuration
+
+_imports:
+  - "../../common/schema_defaults.yaml"
+
+dataset_type: "JMMI"
+
+schema_loaded_sheets:
+  - $use: raw_data
+  
+  - $use: clean_data
+  
+  - $use: cleaning_log_base
+    override:
+      $append_mandatory_columns:
+        - $use: uuid_column
+    
+  - $use: survey
+  - $use: choices
+  - $use: deletion_log
+  
+  - $use: variable_tracker_sheet
+
+
+schema_unloaded_sheets:
+  - $use: read_me
+  - $use: sampling_info
+  
+  - $use: enumerator_performance_sheet
+
+  - $use: meb_analysis
+  - $use: mfs_analysis

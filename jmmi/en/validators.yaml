@@ -1,0 +1,36 @@
+validators:
+  - type: "MissingSheetsCheck"
+    
+  - type: "UnexpectedSheetsCheck"
+  
+  - type: "DuplicateSheetMatches"
+  
+  - type: "MandatoryColumns"
+  
+  - type: "UniqueColumn"
+  
+  - type: "PiiDataCheck"
+  
+  - type: "CrossSheetRowSumCheck"
+  
+  - type: "CrossSheetIdCheck"
+  
+  - type: "CrossSheetIdCheck"
+    kwargs:
+      master_sheet: "clean_data"
+      child_sheets: 
+        - "cleaning_log"
+  
+  - type: "CleaningLogToClean"
+  
+  - type: "RawToCleanToLog"
+  
+  - type: "NaNDataCheck"
+  
+  - type: "ConsentCheck"
+  
+  - type: "ColumnNameCheck"
+  
+  - type: "DataTypeCheck"
+  
+  - type: "SurveyChoicesCheck"

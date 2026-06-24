@@ -1,0 +1,126 @@
+# config/components/defaults.yaml
+# Shared component definitions for all schemas.
+# Use "$use: <key>" in schema files to reference these.
+
+definitions:
+  # --- Sheets ---
+  
+  raw_data:
+    standard_name: "raw_data"
+    allow_fuzzy_matching: false
+    mandatory_columns:
+      - $use: uuid_column
+      - $use: _id_column
+      - $use: consent_column
+
+  clean_data:
+    standard_name: "clean_data"
+    allow_fuzzy_matching: false
+    mandatory_columns:
+      - $use: uuid_column
+      - $use: _id_column
+      - standard_name: "weight"
+        allow_fuzzy_matching: true
+
+  cleaning_log_base:
+    # This is a template that will be instantiated with parameters later
+    # Or you can define specific versions if they don't vary much
+    standard_name: "cleaning_log" # Default name, can be overridden
+    alternate_names: [] 
+    allow_fuzzy_matching: false
+    mandatory_columns:
+      - standard_name: "old_value"
+      - standard_name: "new_value"
+      - standard_name: "change_type"
+        process_values:
+          - process_name: "cleaning_log_validation"
+            values: ["yes", "change_response", "blank_response"]
+      - standard_name: "variable"
+        alternate_names: ["question"]
+
+  variable_tracker_sheet:
+    standard_name: "variable_tracker"
+    alternate_names: []
+    allow_fuzzy_matching: false
+    mandatory_columns:
+      - standard_name: "variable"
+      - standard_name: "action"
+      - standard_name: "rationale"
+
+  enumerator_performance_sheet:
+    standard_name: "enumerator_performance_log"
+    alternate_names: []
+    required: false
+    mandatory_columns: []
+
+  deletion_log:
+    standard_name: "deletion_log"
+    allow_fuzzy_matching: false
+    mandatory_columns:
+      - $use: uuid_column
+      - standard_name: "reason_deletion"
+      - standard_name: "enum_id"
+
+  choices:
+    standard_name: "choices"
+    allow_fuzzy_matching: false
+    mandatory_columns:
+      - standard_name: "list_name"
+      - standard_name: "name"
+
+  survey:
+    standard_name: "survey"
+    allow_fuzzy_matching: false
+    mandatory_columns:
+      - standard_name: "type"
+        process_values:
+          - process_name: "data_type_numeric_check"
+            values: ["integer", "decimal"]
+          - process_name: "data_type_temporal_check"
+            values: ["date"]
+      - standard_name: "name"
+      - standard_name: "calculation"
+
+  read_me:
+    standard_name: "read_me"
+    allow_fuzzy_matching: false
+    mandatory_columns: []
+
+  sampling_info:
+    standard_name: "sampling_info"
+    required: false
+    allow_fuzzy_matching: false
+    mandatory_columns:
+      - standard_name: "strata"
+      - standard_name: "population"
+      - standard_name: "planned surveys"
+      - standard_name: "sampled surveys"
+      - standard_name: "modality (in-person / remote / mixed)"
+
+  meb_analysis:
+    standard_name: "meb_analysis"
+    mandatory_columns: []
+
+  mfs_analysis:
+    standard_name: "mfs_analysis"
+    mandatory_columns: []
+
+
+  # --- Columns & Process Maps (Reused) ---
+
+  uuid_column:
+    standard_name: "uuid"
+    alternate_names: ["_uuid"]
+    is_unique: true
+    allow_fuzzy_matching: false
+
+  consent_column:
+    standard_name: "consent"
+    alternate_names: ["consentement"]
+    process_values:
+      - process_name: "consent_check_validation"
+        values: ["yes", "oui"]
+
+  _id_column:
+    standard_name: "_id"
+    allow_fuzzy_matching: false
