@@ -12,9 +12,8 @@ schema_loaded_sheets:
   - $use: clean_data
   
   - $use: cleaning_log_base
-    override:
-      $append_mandatory_columns:
-        - $use: uuid_column
+    $append_mandatory_columns:
+      - $use: uuid_column
     
   - $use: survey
   - $use: choices

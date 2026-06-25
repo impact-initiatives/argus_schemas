@@ -9,6 +9,8 @@ In order for schemas to properly integrate with Argus files and directories are 
 dataset_type/locale/schema.yaml
 dataset_type/locale/validators.yaml
 ```
+All folders and file names should be kept lowercase. 
+
 For example, an English version of the jmmi dataset would contain:
 ```
 jmmi/en/schema.yaml
@@ -16,6 +18,8 @@ jmmi/en/validators.yaml
 ```
 `schema.yaml` contains the dataset schema. This includes the sheets, columns and other relevant properties.
 `validators.yaml` contains the validation rules relevant for the dataset and their relevant properties.
+
+
 
 # Schema
 Schema files are mapped back to classes in Argus and so need to contain the same properties. Specifically, [BaseDatasetSchema](https://github.com/impact-initiatives/argus/blob/main/src/argus/models/base_dataset_schemas.py) and its components in [SchemaSheetMap, SchemaColumnMap and ProcessValueMap](https://github.com/impact-initiatives/argus/blob/main/src/argus/models/base.py).
@@ -81,9 +85,10 @@ dataset_type: "JMMI"
 
 schema_loaded_sheets:
     - $use: deletion_log
-        override:
-            $append_mandatory_columns:
-                - $use: _id_column
+        $append_mandatory_columns:
+            - $use: some_existing_column #default column
+            - standard_name: "Some_new_column" #new column
+                alternate_names: ["new_column"]
     ...
 ```
 If a rule or property is specified in a file but does not exist then Argus will produce a validation error.
