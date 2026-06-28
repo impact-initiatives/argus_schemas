@@ -1,0 +1,17 @@
+
+_imports:
+  - "../../common/schema_defaults.yaml"
+
+dataset_type: "other_analysis"
+
+schema_loaded_sheets:
+    
+  - $use: survey
+  - $use: choices
+  - $use: clean_data
+
+
+schema_unloaded_sheets:
+  - $use: read_me
+  - $use: sampling_info  
+  - $use: composite_indicators

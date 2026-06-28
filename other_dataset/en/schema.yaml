@@ -2,7 +2,7 @@
 _imports:
   - "../../common/schema_defaults.yaml"
 
-dataset_type: "other"
+dataset_type: "other_dataset"
 
 schema_loaded_sheets:
     

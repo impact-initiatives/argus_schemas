@@ -105,6 +105,10 @@ definitions:
     standard_name: "mfs_analysis"
     mandatory_columns: []
 
+  composite_indicators:
+    standard_name: "composite_indicators"
+    required: false
+
 
   # --- Columns & Process Maps (Reused) ---
 
