@@ -16,4 +16,12 @@ validators:
   - type: "NaNDataCheck"
 
   - type: "SurveyChoicesCheck"
+    kwargs:
+      check_sheets: 
+        - "clean_data"
+
+  - type: "DataTypeCheck"
+    kwargs:
+      check_sheets: 
+        - "clean_data"
   
