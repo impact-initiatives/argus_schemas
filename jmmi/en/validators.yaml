@@ -3,11 +3,11 @@ validators:
     
   - type: "UnexpectedSheetsCheck"
   
-  - type: "DuplicateSheetMatches"
+  - type: "DuplicateSheetMatchCheck"
   
-  - type: "MandatoryColumns"
+  - type: "MandatoryColumnsCheck"
   
-  - type: "UniqueColumn"
+  - type: "UniqueColumnCheck"
   
   - type: "PiiDataCheck"
   
@@ -21,9 +21,9 @@ validators:
       child_sheets: 
         - "cleaning_log"
   
-  - type: "CleaningLogToClean"
+  - type: "CleaningLogToCleanCheck"
   
-  - type: "RawToCleanToLog"
+  - type: "RawToCleanToLogCheck"
   
   - type: "NaNDataCheck"
   

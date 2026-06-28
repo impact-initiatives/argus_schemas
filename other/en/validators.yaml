@@ -3,11 +3,11 @@ validators:
     
   - type: "UnexpectedSheetsCheck"
   
-  - type: "DuplicateSheetMatches"
+  - type: "DuplicateSheetMatchCheck"
   
-  - type: "MandatoryColumns"
+  - type: "MandatoryColumnsCheck"
   
-  - type: "UniqueColumn"
+  - type: "UniqueColumnCheck"
   
   - type: "PiiDataCheck" 
   

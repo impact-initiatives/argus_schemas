@@ -91,6 +91,19 @@ schema_loaded_sheets:
                 alternate_names: ["new_column"]
     ...
 ```
+or to add a new sheet not from common
+```yaml
+_imports:
+  - "../../common/schema_defaults.yaml"
+
+dataset_type: "JMMI"
+
+schema_loaded_sheets:
+    - some_new_sheet:
+        standard_name: "a_new_sheet"
+        mandatory_columns: []
+# rest of schema...
+```
 If a rule or property is specified in a file but does not exist then Argus will produce a validation error.
 
 # Validators
