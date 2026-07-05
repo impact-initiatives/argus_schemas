@@ -1,0 +1,27 @@
+validators:
+  - type: "MissingSheetsCheck"
+    
+  - type: "UnexpectedSheetsCheck"
+  
+  - type: "DuplicateSheetMatchCheck"
+  
+  - type: "MandatoryColumnsCheck"
+  
+  - type: "UniqueColumnCheck"
+  
+  - type: "PiiDataCheck" 
+  
+  - type: "ColumnNameCheck"
+
+  - type: "NaNDataCheck"
+
+  - type: "SurveyChoicesCheck"
+    kwargs:
+      check_sheets: 
+        - "clean_data"
+
+  - type: "DataTypeCheck"
+    kwargs:
+      check_sheets: 
+        - "clean_data"
+  
