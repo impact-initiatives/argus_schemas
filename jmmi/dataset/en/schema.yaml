@@ -10,23 +10,41 @@ schema_loaded_sheets:
   - $use: raw_data
   
   - $use: clean_data
-  
+    $append_mandatory_columns:
+      - standard_name: "country"
+        allow_fuzzy_matching: false
+      - standard_name: "round"
+        allow_fuzzy_matching: false
+      - standard_name: "date"
+        allow_fuzzy_matching: false
+      - standard_name: "month"
+        allow_fuzzy_matching: false
+      - standard_name: "year"
+        allow_fuzzy_matching: false
+      - standard_name: "admin1_code"
+        allow_fuzzy_matching: false
+      - standard_name: "admin1_label"
+        allow_fuzzy_matching: false
+      - standard_name: "admin2_code"
+        allow_fuzzy_matching: false
+      - standard_name: "admin2_label" 
+        allow_fuzzy_matching: false
+
   - $use: cleaning_log_base
     $append_mandatory_columns:
       - $use: uuid_column
     
   - $use: survey
   - $use: choices
-  - $use: deletion_log
-  
+  - $use: deletion_log  
   - $use: variable_tracker_sheet
+  - $use: meb_analysis
+  - $use: mfs_analysis
 
 
 schema_unloaded_sheets:
   - $use: read_me
-  - $use: sampling_info
-  
+  - $use: sampling_info  
   - $use: enumerator_performance_sheet
 
-  - $use: meb_analysis
-  - $use: mfs_analysis
+  

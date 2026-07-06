@@ -99,11 +99,49 @@ definitions:
 
   meb_analysis:
     standard_name: "meb_analysis"
-    mandatory_columns: []
+    mandatory_columns: 
+      - $use: uuid_column
+      - standard_name: "country"
+        allow_fuzzy_matching: false
+      - standard_name: "round"
+        allow_fuzzy_matching: false
+      - standard_name: "date"
+        allow_fuzzy_matching: false
+      - standard_name: "month"
+        allow_fuzzy_matching: false
+      - standard_name: "year"
+        allow_fuzzy_matching: false
+      - standard_name: "admin1_code"
+        allow_fuzzy_matching: false
+      - standard_name: "admin1_label"
+        allow_fuzzy_matching: false
+      - standard_name: "admin2_code"
+        allow_fuzzy_matching: false
+      - standard_name: "admin2_label" 
+        allow_fuzzy_matching: false
 
   mfs_analysis:
     standard_name: "mfs_analysis"
-    mandatory_columns: []
+    mandatory_columns: 
+      - $use: uuid_column
+      - standard_name: "country"
+        allow_fuzzy_matching: false
+      - standard_name: "round"
+        allow_fuzzy_matching: false
+      - standard_name: "date"
+        allow_fuzzy_matching: false
+      - standard_name: "month"
+        allow_fuzzy_matching: false
+      - standard_name: "year"
+        allow_fuzzy_matching: false
+      - standard_name: "admin1_code"
+        allow_fuzzy_matching: false
+      - standard_name: "admin1_label"
+        allow_fuzzy_matching: false
+      - standard_name: "admin2_code"
+        allow_fuzzy_matching: false
+      - standard_name: "admin2_label" 
+        allow_fuzzy_matching: false
 
   composite_indicators:
     standard_name: "composite_indicators"
