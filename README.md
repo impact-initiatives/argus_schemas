@@ -6,15 +6,15 @@
 # Structure
 In order for schemas to properly integrate with Argus files and directories are required to follow a set structure in this repository.
 ```bash
-dataset_type/locale/schema.yaml
-dataset_type/locale/validators.yaml
+type_of_programme/type_of_output/locale/schema.yaml
+type_of_programme/type_of_output/locale/validators.yaml
 ```
 All folders and file names should be kept lowercase. 
 
 For example, an English version of the jmmi dataset would contain:
 ```
-jmmi/en/schema.yaml
-jmmi/en/validators.yaml
+jmmi/dataset/en/schema.yaml
+jmmi/dataset/en/validators.yaml
 ```
 `schema.yaml` contains the dataset schema. This includes the sheets, columns and other relevant properties.
 `validators.yaml` contains the validation rules relevant for the dataset and their relevant properties.
@@ -55,9 +55,9 @@ uuid_column:
 `deletion_log` can then be used as part of another schema
 ```yaml
 _imports:
-  - "../../common/schema_defaults.yaml"
+  - "../../../common/schema_defaults.yaml"
 
-dataset_type: "JMMI"
+dataset_type: "jmmi_dataset"
 
 schema_loaded_sheets:
     - $use: deletion_log
@@ -66,9 +66,9 @@ schema_loaded_sheets:
 it can even be modified if required. To change one of the properties:
 ```yaml
 _imports:
-  - "../../common/schema_defaults.yaml"
+  - "../../../common/schema_defaults.yaml"
 
-dataset_type: "JMMI"
+dataset_type: "jmmi_dataset"
 
 schema_loaded_sheets:
     - $use: deletion_log
@@ -79,9 +79,9 @@ schema_loaded_sheets:
 or to add to one of the properties:
 ```yaml
 _imports:
-  - "../../common/schema_defaults.yaml"
+  - "../../../common/schema_defaults.yaml"
 
-dataset_type: "JMMI"
+dataset_type: "jmmi_dataset"
 
 schema_loaded_sheets:
     - $use: deletion_log
@@ -94,9 +94,9 @@ schema_loaded_sheets:
 or to add a new sheet not from common
 ```yaml
 _imports:
-  - "../../common/schema_defaults.yaml"
+  - "../../../common/schema_defaults.yaml"
 
-dataset_type: "JMMI"
+dataset_type: "jmmi_dataset"
 
 schema_loaded_sheets:
     - some_new_sheet:

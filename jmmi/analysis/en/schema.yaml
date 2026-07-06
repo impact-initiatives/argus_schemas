@@ -1,8 +1,8 @@
 
 _imports:
-  - "../../common/schema_defaults.yaml"
+  - "../../../common/schema_defaults.yaml"
 
-dataset_type: "other_analysis"
+dataset_type: "jmmi_analysis"
 
 schema_loaded_sheets:
     
