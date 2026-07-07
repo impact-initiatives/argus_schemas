@@ -119,6 +119,11 @@ definitions:
         allow_fuzzy_matching: false
       - standard_name: "admin2_label" 
         allow_fuzzy_matching: false
+      - standard_name: "meb_total" 
+        allow_fuzzy_matching: false
+      - standard_name: "admin_level_aggregation" 
+        allow_fuzzy_matching: false
+        
 
   mfs_analysis:
     standard_name: "mfs_analysis"
@@ -141,6 +146,8 @@ definitions:
       - standard_name: "admin2_code"
         allow_fuzzy_matching: false
       - standard_name: "admin2_label" 
+        allow_fuzzy_matching: false
+      - standard_name: "admin_level_aggregation" 
         allow_fuzzy_matching: false
 
   composite_indicators:
