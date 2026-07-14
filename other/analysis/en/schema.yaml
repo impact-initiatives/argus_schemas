@@ -1,6 +1,6 @@
 
 _imports:
-  - "../../common/schema_defaults.yaml"
+  - "../../../common/schema_defaults.yaml"
 
 dataset_type: "other_analysis"
 
