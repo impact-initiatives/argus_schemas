@@ -154,6 +154,11 @@ definitions:
     standard_name: "composite_indicators"
     required: false
 
+  analysis_table:
+    standard_name: "analysis_table"
+    matching_term: "analysis"
+    matching_term_ignore: [checklist]
+
 
   # --- Columns & Process Maps (Reused) ---
 

@@ -14,3 +14,4 @@ schema_unloaded_sheets:
   - $use: read_me
   - $use: sampling_info  
   - $use: composite_indicators
+  - $use: analysis_table
