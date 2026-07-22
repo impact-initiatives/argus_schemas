@@ -99,6 +99,7 @@ definitions:
 
   meb_analysis:
     standard_name: "meb_analysis"
+    allow_fuzzy_matching: false
     mandatory_columns: 
       - $use: uuid_column
       - standard_name: "country"
@@ -127,6 +128,7 @@ definitions:
 
   mfs_analysis:
     standard_name: "mfs_analysis"
+    allow_fuzzy_matching: false
     mandatory_columns: 
       - $use: uuid_column
       - standard_name: "country"
