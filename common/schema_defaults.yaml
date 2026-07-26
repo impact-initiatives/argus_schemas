@@ -46,6 +46,7 @@ definitions:
       - standard_name: "variable"
       - standard_name: "action"
       - standard_name: "rationale"
+        alternate_names: ["reason", "justification", "explanation"]
 
   enumerator_performance_sheet:
     standard_name: "enumerator_performance_log"
@@ -59,7 +60,9 @@ definitions:
     mandatory_columns:
       - $use: uuid_column
       - standard_name: "reason_deletion"
-      - standard_name: "enum_id"
+        alternate_names: ["reason", "rationale", "explanation"]
+      # - standard_name: "enum_id"
+      #   alternate_names: ["enumerator"]
 
   choices:
     standard_name: "choices"
@@ -151,6 +154,9 @@ definitions:
         allow_fuzzy_matching: false
       - standard_name: "admin_level_aggregation" 
         allow_fuzzy_matching: false
+
+  checklist:
+    standard_name: "checklist_data_cleaning"
 
   composite_indicators:
     standard_name: "composite_indicators"

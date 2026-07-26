@@ -15,6 +15,7 @@ schema_loaded_sheets:
 schema_unloaded_sheets:
   - $use: read_me
   - $use: sampling_info  
+  - $use: checklist
 
   - $use: enumerator_performance_sheet
 
