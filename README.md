@@ -31,7 +31,7 @@ enumerator_performance_sheet:
     standard_name: "enumerator_performance_log"
     alternate_names: []
     required: false
-    mandatory_columns: []
+    columns: []
 ```
 ## Common Components
 Schemas often have the same requirements for sheets and columns. To reduce duplicated configuration shared components can be stored in `common/schema_defaults.yaml`. These can then be imported in schema specific files or even used within `schema_defaults.yaml` itself.
@@ -41,7 +41,7 @@ For example, within `schema_defaults` `deletion_log` makes use of `uuid_column` 
 deletion_log:
     standard_name: "deletion_log"
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - $use: uuid_column
       - standard_name: "reason_deletion"
       - standard_name: "enum_id"
@@ -85,7 +85,7 @@ dataset_type: "jmmi_dataset"
 
 schema_loaded_sheets:
     - $use: deletion_log
-        $append_mandatory_columns:
+        $append_columns:
             - $use: some_existing_column #default column
             - standard_name: "Some_new_column" #new column
                 alternate_names: ["new_column"]
@@ -101,7 +101,7 @@ dataset_type: "jmmi_dataset"
 schema_loaded_sheets:
     - some_new_sheet:
         standard_name: "a_new_sheet"
-        mandatory_columns: []
+        columns: []
 # rest of schema...
 ```
 If a rule or property is specified in a file but does not exist then Argus will produce a validation error.

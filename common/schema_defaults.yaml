@@ -8,7 +8,7 @@ definitions:
   raw_data:
     standard_name: "raw_data"
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - $use: uuid_column
       - $use: _id_column
       - $use: consent_column
@@ -16,11 +16,12 @@ definitions:
   clean_data:
     standard_name: "clean_data"
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - $use: uuid_column
       - $use: _id_column
       - standard_name: "weight"
-        allow_fuzzy_matching: true
+        allow_fuzzy_matching: false
+        required: false
 
   cleaning_log_base:
     # This is a template that will be instantiated with parameters later
@@ -28,7 +29,7 @@ definitions:
     standard_name: "cleaning_log" # Default name, can be overridden
     alternate_names: [] 
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - standard_name: "old_value"
       - standard_name: "new_value"
       - standard_name: "change_type"
@@ -42,7 +43,7 @@ definitions:
     standard_name: "variable_tracker"
     alternate_names: []
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - standard_name: "variable"
       - standard_name: "action"
       - standard_name: "rationale"
@@ -52,12 +53,12 @@ definitions:
     standard_name: "enumerator_performance_log"
     alternate_names: []
     required: false
-    mandatory_columns: []
+    columns: []
 
   deletion_log:
     standard_name: "deletion_log"
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - $use: uuid_column
       - standard_name: "reason_deletion"
         alternate_names: ["reason", "rationale", "explanation"]
@@ -67,14 +68,14 @@ definitions:
   choices:
     standard_name: "choices"
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - standard_name: "list_name"
       - standard_name: "name"
 
   survey:
     standard_name: "survey"
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - standard_name: "type"
         process_values:
           - process_name: "data_type_numeric_check"
@@ -87,13 +88,13 @@ definitions:
   read_me:
     standard_name: "read_me"
     allow_fuzzy_matching: false
-    mandatory_columns: []
+    columns: []
 
   sampling_info:
     standard_name: "sampling_info"
     required: false
     allow_fuzzy_matching: false
-    mandatory_columns:
+    columns:
       - standard_name: "strata"
       - standard_name: "population"
       - standard_name: "planned surveys"
@@ -103,7 +104,7 @@ definitions:
   meb_analysis:
     standard_name: "meb_analysis"
     allow_fuzzy_matching: false
-    mandatory_columns: 
+    columns: 
       - $use: uuid_column
       - standard_name: "country"
         allow_fuzzy_matching: false
@@ -132,7 +133,7 @@ definitions:
   mfs_analysis:
     standard_name: "mfs_analysis"
     allow_fuzzy_matching: false
-    mandatory_columns: 
+    columns: 
       - $use: uuid_column
       - standard_name: "country"
         allow_fuzzy_matching: false
