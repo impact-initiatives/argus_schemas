@@ -34,3 +34,5 @@ validators:
   - type: "DataTypeCheck"
   
   - type: "SurveyChoicesCheck"
+
+  - type: "JMMIColumnNameCheck"
