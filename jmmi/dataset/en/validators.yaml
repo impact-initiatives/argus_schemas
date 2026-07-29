@@ -36,3 +36,5 @@ validators:
   - type: "SurveyChoicesCheck"
 
   - type: "JMMIColumnNameCheck"
+
+  - type: "JMMIMebAnalysisCheck"
