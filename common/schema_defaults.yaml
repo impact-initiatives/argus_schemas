@@ -105,7 +105,6 @@ definitions:
     standard_name: "meb_analysis"
     allow_fuzzy_matching: false
     columns: 
-      - $use: uuid_column
       - standard_name: "country"
         allow_fuzzy_matching: false
       - standard_name: "round"
@@ -134,7 +133,6 @@ definitions:
     standard_name: "mfs_analysis"
     allow_fuzzy_matching: false
     columns: 
-      - $use: uuid_column
       - standard_name: "country"
         allow_fuzzy_matching: false
       - standard_name: "round"
