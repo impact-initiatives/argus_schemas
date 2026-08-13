@@ -13,22 +13,30 @@ schema_loaded_sheets:
     $append_columns:
       - standard_name: "country"
         allow_fuzzy_matching: false
+        allow_empty_values: false
       - standard_name: "round"
         allow_fuzzy_matching: false
       - standard_name: "date"
         allow_fuzzy_matching: false
+        allow_empty_values: false
       - standard_name: "month"
         allow_fuzzy_matching: false
+        allow_empty_values: false
       - standard_name: "year"
         allow_fuzzy_matching: false
+        allow_empty_values: false
       - standard_name: "admin1_code"
         allow_fuzzy_matching: false
+        allow_empty_values: false
       - standard_name: "admin1_label"
         allow_fuzzy_matching: false
+        allow_empty_values: false
       - standard_name: "admin2_code"
         allow_fuzzy_matching: false
+        allow_empty_values: false
       - standard_name: "admin2_label" 
         allow_fuzzy_matching: false
+        allow_empty_values: false
 
   - $use: cleaning_log_base
     $append_columns:
