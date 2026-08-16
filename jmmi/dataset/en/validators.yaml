@@ -38,3 +38,7 @@ validators:
   - type: "JMMIColumnNameCheck"
 
   - type: "JMMIMebAnalysisCheck"
+
+  - type: "JMMIColumnDataCheck"
+
+  - type: "EmptyColumnCheck"

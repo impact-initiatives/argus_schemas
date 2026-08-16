@@ -12,4 +12,6 @@ validators:
   - type: "PiiDataCheck" 
   
   - type: "ColumnNameCheck"
+
+  - type: "EmptyColumnCheck"
   
