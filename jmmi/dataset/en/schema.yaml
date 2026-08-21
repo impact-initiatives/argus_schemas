@@ -46,7 +46,10 @@ schema_loaded_sheets:
 
   - $use: survey
   - $use: choices
-  - $use: deletion_log  
+  - $use: deletion_log_base
+    $append_columns:
+      - $use: uuid_column
+        
   - $use: variable_tracker_sheet
   - $use: meb_analysis
   - $use: mfs_analysis
