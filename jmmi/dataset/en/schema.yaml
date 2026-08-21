@@ -41,7 +41,9 @@ schema_loaded_sheets:
   - $use: cleaning_log_base
     $append_columns:
       - $use: uuid_column
-    
+        override:
+          is_unique: false
+
   - $use: survey
   - $use: choices
   - $use: deletion_log  
