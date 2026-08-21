@@ -8,7 +8,6 @@ schema_loaded_sheets:
     
   - $use: survey
   - $use: choices
-  - $use: deletion_log
   
   - $use: variable_tracker_sheet
 
