@@ -24,9 +24,8 @@ definitions:
         required: false
 
   cleaning_log_base:
-    # This is a template that will be instantiated with parameters later
-    # Or you can define specific versions if they don't vary much
-    standard_name: "cleaning_log" # Default name, can be overridden
+    # cleaning log template. need to add an id column to this as a minimum
+    standard_name: "cleaning_log" 
     alternate_names: [] 
     allow_fuzzy_matching: false
     columns:
@@ -55,11 +54,11 @@ definitions:
     required: false
     columns: []
 
-  deletion_log:
+# deletion log base. need to add an id column to this as a minimum
+  deletion_log_base:
     standard_name: "deletion_log"
     allow_fuzzy_matching: false
     columns:
-      - $use: uuid_column
       - standard_name: "reason_deletion"
         alternate_names: ["reason", "rationale", "explanation"]
       # - standard_name: "enum_id"
