@@ -8,6 +8,7 @@ definitions:
   raw_data:
     standard_name: "raw_data"
     allow_fuzzy_matching: false
+    classification: "raw_data_sheet"
     columns:
       - $use: uuid_column
       - $use: _id_column
@@ -16,6 +17,7 @@ definitions:
   clean_data:
     standard_name: "clean_data"
     allow_fuzzy_matching: false
+    classification: "clean_data_sheet"
     columns:
       - $use: uuid_column
       - $use: _id_column
@@ -28,6 +30,7 @@ definitions:
     standard_name: "cleaning_log" 
     alternate_names: [] 
     allow_fuzzy_matching: false
+    classification: "cleaning_log_sheet"
     columns:
       - standard_name: "old_value"
       - standard_name: "new_value"
@@ -58,6 +61,7 @@ definitions:
   deletion_log_base:
     standard_name: "deletion_log"
     allow_fuzzy_matching: false
+    classification: "deletion_log_sheet"
     columns:
       - standard_name: "reason_deletion"
         alternate_names: ["reason", "rationale", "explanation"]
@@ -193,6 +197,7 @@ definitions:
     alternate_names: ["_uuid"]
     is_unique: true
     allow_fuzzy_matching: false
+    allow_empty_values: false
 
   consent_column:
     standard_name: "consent"
