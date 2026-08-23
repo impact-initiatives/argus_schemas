@@ -8,6 +8,7 @@ In order for schemas to properly integrate with Argus files and directories are 
 ```bash
 type_of_programme/type_of_output/locale/schema.yaml
 type_of_programme/type_of_output/locale/validators.yaml
+type_of_programme/type_of_output/other/config/files.ymal
 ```
 All folders and file names should be kept lowercase. 
 
@@ -129,3 +130,12 @@ validators:
 
 If a rule or property is specified in a file but does not exist then Argus will produce a validation error.
 
+# Config
+Some validation rules require referencing other data like country codes and column naming configurations. These case be stored in seperate config files under the relevant programme and then referenced in the relevant validation rules. 
+
+For example:
+```
+jmmi/config/iso_codes.yaml
+jmmi/config/suffix_list.yaml
+...
+```
