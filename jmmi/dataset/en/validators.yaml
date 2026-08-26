@@ -20,6 +20,13 @@ validators:
       master_sheet: "clean_data"
       child_sheets: 
         - "cleaning_log"
+
+  - type: "CrossSheetIdCheck"
+    kwargs:
+      master_sheet: "cleaning_log"
+      child_sheets: 
+        - "deletion_log"
+      is_in: false
   
   - type: "CleaningLogToCleanCheck"
   
