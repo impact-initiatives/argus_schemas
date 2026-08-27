@@ -8,7 +8,6 @@ schema_loaded_sheets:
     
   - $use: survey
   - $use: choices
-  - $use: clean_data
 
 schema_unloaded_sheets:
   - $use: read_me

@@ -183,6 +183,7 @@ definitions:
   composite_indicators:
     standard_name: "composite_indicators"
     required: false
+    matching_term: "composite_indicators"
 
   analysis_table:
     standard_name: "analysis_table"
