@@ -2,7 +2,8 @@
 _imports:
   - "../../../common/schema_defaults.yaml"
 
-dataset_type: "other_analysis"
+programme_type: "other"
+output_type: "analysis"
 
 schema_loaded_sheets:
     
@@ -14,4 +15,4 @@ schema_unloaded_sheets:
   - $use: sampling_info  
   - $use: composite_indicators
   - $use: analysis_table
-  - $use: checklist
+  - $use: checklist_data_analysis

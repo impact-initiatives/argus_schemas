@@ -177,8 +177,11 @@ definitions:
       - standard_name: "admin_level_aggregation" 
         allow_fuzzy_matching: false
 
-  checklist:
+  checklist_data_cleaning:
     standard_name: "checklist_data_cleaning"
+
+  checklist_data_analysis:
+    standard_name: "checklist_data_analysis"
 
   composite_indicators:
     standard_name: "composite_indicators"

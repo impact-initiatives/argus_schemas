@@ -2,7 +2,8 @@
 _imports:
   - "../../../common/schema_defaults.yaml"
 
-dataset_type: "jmmi_analysis"
+programme_type: "jmmi"
+output_type: "analysis"
 
 schema_loaded_sheets:
     
@@ -41,4 +42,4 @@ schema_unloaded_sheets:
   - $use: read_me
   - $use: sampling_info  
   - $use: composite_indicators
-  - $use: checklist
+  - $use: checklist_data_analysis

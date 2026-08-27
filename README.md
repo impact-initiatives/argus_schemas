@@ -58,7 +58,8 @@ uuid_column:
 _imports:
   - "../../../common/schema_defaults.yaml"
 
-dataset_type: "jmmi_dataset"
+programme_type: "jmmi"
+output_type: "dataset"
 
 schema_loaded_sheets:
     - $use: deletion_log
@@ -69,7 +70,8 @@ it can even be modified if required. To change one of the properties:
 _imports:
   - "../../../common/schema_defaults.yaml"
 
-dataset_type: "jmmi_dataset"
+programme_type: "jmmi"
+output_type: "dataset"
 
 schema_loaded_sheets:
     - $use: deletion_log
@@ -82,7 +84,8 @@ or to add to one of the properties:
 _imports:
   - "../../../common/schema_defaults.yaml"
 
-dataset_type: "jmmi_dataset"
+programme_type: "jmmi"
+output_type: "dataset"
 
 schema_loaded_sheets:
     - $use: deletion_log
@@ -97,7 +100,8 @@ or to add a new sheet not from common
 _imports:
   - "../../../common/schema_defaults.yaml"
 
-dataset_type: "jmmi_dataset"
+programme_type: "jmmi"
+output_type: "dataset"
 
 schema_loaded_sheets:
     - some_new_sheet:
