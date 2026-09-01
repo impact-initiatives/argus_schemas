@@ -9,8 +9,14 @@ output_type: "dataset"
 
 schema_loaded_sheets:
   - $use: raw_data
+    override:
+      linked_log: deletion_log
+      linked_sheet: clean_data
   
   - $use: clean_data
+    override:
+      linked_log: cleaning_log
+      linked_sheet: raw_data
     $append_columns:
       - standard_name: "country"
         allow_fuzzy_matching: false
@@ -40,6 +46,9 @@ schema_loaded_sheets:
         allow_empty_values: false
 
   - $use: cleaning_log_base
+    override:
+      parent_sheet: clean_data
+      parent_linking_column: uuid
     $append_columns:
       - $use: uuid_column
         override:
@@ -48,6 +57,9 @@ schema_loaded_sheets:
   - $use: survey
   - $use: choices
   - $use: deletion_log_base
+    override:
+      parent_sheet: raw_data
+      parent_linking_column: uuid
     $append_columns:
       - $use: uuid_column
         

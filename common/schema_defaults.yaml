@@ -25,6 +25,14 @@ definitions:
         allow_fuzzy_matching: false
         required: false
 
+  base_repeat_sheet:
+    allow_fuzzy_matching: false
+    columns:
+      - $use: uuid_column
+        override:
+          is_unique: false
+
+
   cleaning_log_base:
     # cleaning log template. need to add an id column to this as a minimum
     standard_name: "cleaning_log" 

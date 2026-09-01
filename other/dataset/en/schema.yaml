@@ -5,12 +5,11 @@ _imports:
 programme_type: "other"
 output_type: "dataset"
 
-schema_loaded_sheets:
-    
+schema_loaded_sheets:    
   - $use: survey
-  - $use: choices
-  
+  - $use: choices  
   - $use: variable_tracker_sheet
+  # additional sheets are added dynamically
 
 schema_unloaded_sheets:
   - $use: read_me
