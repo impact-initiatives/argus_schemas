@@ -8,4 +8,4 @@ validators:
   - type: "ColumnNameCheck"
   - type: "EmptyColumnCheck"
   
-# other validators added dynamically based on schema
+  # other validators added dynamically based on schema
