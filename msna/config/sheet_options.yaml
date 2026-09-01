@@ -6,6 +6,11 @@ prefixes:
   - roster_
   - edu_
   - health_
+  - nut_
+  - prot_
+  - preg_
+  - died_member_
+  - adults_working_
 
 sheet_type:
   - clean_data
