@@ -88,6 +88,8 @@ definitions:
       - standard_name: "name"
       - standard_name: "calculation"
       - standard_name: "relevant"
+      - standard_name: "required"
+
 
   read_me:
     standard_name: "read_me"
