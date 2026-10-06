@@ -5,7 +5,7 @@ _imports:
 programme_type: "jmmi"
 output_type: "analysis"
 
-schema_loaded_sheets:
+loaded_sheets:
     
   - $use: survey
   - $use: choices
@@ -38,7 +38,7 @@ schema_loaded_sheets:
         allow_fuzzy_matching: false
         allow_empty_values: false
 
-schema_unloaded_sheets:
+unloaded_sheets:
   - $use: read_me
   - $use: sampling_info  
   - $use: composite_indicators

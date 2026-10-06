@@ -7,7 +7,7 @@ _imports:
 programme_type: "jmmi"
 output_type: "dataset"
 
-schema_loaded_sheets:
+loaded_sheets:
   - $use: raw_data
     override:
       linked_log: deletion_log
@@ -68,7 +68,7 @@ schema_loaded_sheets:
   - $use: mfs_analysis
 
 
-schema_unloaded_sheets:
+unloaded_sheets:
   - $use: read_me
   - $use: sampling_info  
   - $use: enumerator_performance_sheet

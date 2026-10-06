@@ -12,7 +12,7 @@ _imports:
 programme_type: msna
 output_type: dataset
 
-schema_loaded_sheets:
+loaded_sheets:
 
 # main sheets
   - $use: raw_data
@@ -133,7 +133,7 @@ schema_loaded_sheets:
   - $use: variable_tracker_sheet
 
   
-schema_unloaded_sheets:
+unloaded_sheets:
   - $use: read_me
   - $use: sampling_info  
   - $use: enumerator_performance_sheet

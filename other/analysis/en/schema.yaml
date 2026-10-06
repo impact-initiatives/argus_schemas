@@ -5,12 +5,12 @@ _imports:
 programme_type: "other"
 output_type: "analysis"
 
-schema_loaded_sheets:
+loaded_sheets:
   - $use: survey
   - $use: choices
   # additional sheets are added dynamically
 
-schema_unloaded_sheets:
+unloaded_sheets:
   - $use: read_me
   - $use: sampling_info  
   - $use: composite_indicators
