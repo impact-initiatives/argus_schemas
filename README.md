@@ -111,7 +111,7 @@ schema_loaded_sheets:
 ```
 A list of columns can also be specified and reused
 ```yaml
-# in schema defaults
+# in schema_defaults.yaml
 admin_columns:
     - standard_name: "admin1_code"
         allow_fuzzy_matching: false
@@ -121,10 +121,17 @@ admin_columns:
         allow_empty_values: false
 
 # then in the schema file
-deletion_log:
-    standard_name: "deletion_log"
-    columns:
-      - $use: admin_columns
+_imports:
+  - "../../../common/schema_defaults.yaml"
+
+programme_type: "jmmi"
+output_type: "dataset"
+
+schema_loaded_sheets:
+    - deletion_log:
+        standard_name: "deletion_log"
+        columns:
+        - $use: admin_columns
 
 ```
 
