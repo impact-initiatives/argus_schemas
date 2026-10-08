@@ -109,6 +109,33 @@ schema_loaded_sheets:
         columns: []
 # rest of schema...
 ```
+A list of columns can also be specified and reused
+```yaml
+# in schema_defaults.yaml
+admin_columns:
+    - standard_name: "admin1_code"
+        allow_fuzzy_matching: false
+        allow_empty_values: false
+    - standard_name: "admin1_label"
+        allow_fuzzy_matching: false
+        allow_empty_values: false
+
+# then in the schema file
+_imports:
+  - "../../../common/schema_defaults.yaml"
+
+programme_type: "jmmi"
+output_type: "dataset"
+
+schema_loaded_sheets:
+    - deletion_log:
+        standard_name: "deletion_log"
+        columns:
+        - $use: admin_columns
+
+```
+
+
 If a rule or property is specified in a file but does not exist then Argus will produce a validation error.
 
 # Validators
@@ -131,6 +158,22 @@ validators:
             child_sheets: 
             - "cleaning_log"
 ```
+Default validators can also be stored seperatly and then used
+```yaml
+# in validator_defaults.yaml
+definitions:
+  base_validators:
+    - type: "MissingSheetsCheck"    
+    - type: "UnexpectedSheetsCheck" 
+
+# then in the relevant validators.yaml 
+_imports:
+  - "../../../common/validator_defaults.yaml"
+
+validators:
+  - $use: base_validators
+```
+
 
 If a rule or property is specified in a file but does not exist then Argus will produce a validation error.
 
