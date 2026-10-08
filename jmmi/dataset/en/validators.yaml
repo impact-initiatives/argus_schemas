@@ -1,12 +1,8 @@
+_imports:
+  - "../../../common/validator_defaults.yaml"
+
 validators:
-  - type: "MissingSheetsCheck"    
-  - type: "UnexpectedSheetsCheck"  
-  - type: "DuplicateSheetMatchCheck"  
-  - type: "MandatoryColumnsCheck"  
-  - type: "UniqueColumnCheck"  
-  - type: "PiiDataCheck"   
-  - type: "ColumnNameCheck"
-  - type: "EmptyColumnCheck"
+  - $use: base_validators
 
   - type: "JMMIColumnNameCheck"
   - type: "JMMIMebAnalysisCheck"
