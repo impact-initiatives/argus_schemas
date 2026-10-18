@@ -3,6 +3,7 @@
 
 _imports:
   - "../../../common/schema_defaults.yaml"
+  - "../../config/schema_defaults.yaml"
 
 programme_type: "jmmi"
 output_type: "dataset"
